@@ -11,8 +11,5 @@ jobs:
       name: "Unique Array (Deno)"
       color: "#000000"
       thumbnail: "https://i.imgur.com/r4wRkZ5.png"
-      releases: |
-        **- Deno Land:** https://deno.land/x/unique_array
-        **- GitHub (& Changelog):** ${{github.event.release.html_url}}
     secrets:
       DISCORD_WEBHOOK: "${{secrets.DISCORD_HXHS_PROJECTNEWRELEASEANNOUNCER_WEBHOOK}}"
