@@ -50,7 +50,7 @@ uniqueArray<T>(item: T[]): T[];
 
 ### Example
 
-```js
+```ts
 uniqueArray([{ foo: "bar" }, { foo: "bar" }, { bar: "gaz" }]);
 //=> [{ foo: "bar" }, { bar: "gaz" }]
 ```
