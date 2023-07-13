@@ -1,4 +1,4 @@
-import { equal } from "https://deno.land/std@0.193.0/testing/asserts.ts";
+import { equal } from "./deps.ts";
 /**
  * @function uniqueArray
  * @description Return unique array elements without any duplicated elements by ignore their reference points.
