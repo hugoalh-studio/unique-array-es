@@ -26,10 +26,6 @@ A Deno module to return unique array elements without any duplicated elements by
 ### Getting Started
 
 - Deno >= v1.34.0
-  - **`allow-net` (Allow Network Addresses):**
-    | **IP / Hostname** | **Description** |
-    |:-:|:--|
-    | `deno.land` | Dependencies |
 
 ```ts
 import uniqueArray from "<URL>";// Default Import
