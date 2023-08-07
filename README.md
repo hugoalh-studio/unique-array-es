@@ -21,7 +21,7 @@ A Deno module to return unique array elements without any duplicated elements by
 >
 > - [NodeJS](https://github.com/hugoalh-studio/unique-array-nodejs)
 
-## 📚 Documentation
+## 📓 Documentation
 
 ### Getting Started
 
