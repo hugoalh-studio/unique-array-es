@@ -4,6 +4,9 @@ import { equal } from "https://deno.land/std@0.197.0/assert/equal.ts";
  * @template {unknown} T
  * @param {T[]} item Array that need to have unique elements.
  * @returns {T[]} An array with unique elements.
+ * @example
+ * uniqueArray([{ foo: "bar" }, { foo: "bar" }, { bar: "gaz" }]);
+ * //=> [{ foo: "bar" }, { bar: "gaz" }]
  */
 export default function uniqueArray<T>(item: T[]): T[] {
 	if (!Array.isArray(item)) {
