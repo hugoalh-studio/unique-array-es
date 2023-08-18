@@ -6,6 +6,6 @@ Deno.bench({
 			{ foo: "bar" },
 			{ foo: "bar" },
 			{ bar: "gaz" }
-		])
+		]);
 	}
 });
