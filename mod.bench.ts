@@ -1,6 +1,6 @@
 import uniqueArray from "./mod.ts";
 Deno.bench({
-	name: "0",
+	name: "1",
 	fn: () => {
 		uniqueArray([
 			{ foo: "bar" },

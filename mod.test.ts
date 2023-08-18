@@ -2,13 +2,13 @@ import { assertEquals } from "https://deno.land/std@0.198.0/assert/assert_equals
 import { assertThrows } from "https://deno.land/std@0.198.0/assert/assert_throws.ts";
 import uniqueArray from "./mod.ts";
 Deno.test({
-	name: "P-0",
+	name: "P-1",
 	fn: () => {
 		assertEquals(uniqueArray([]), []);
 	}
 });
 Deno.test({
-	name: "P-1",
+	name: "P-2",
 	fn: () => {
 		assertEquals(uniqueArray([
 			{ foo: "bar" },
@@ -21,7 +21,7 @@ Deno.test({
 	}
 });
 Deno.test({
-	name: "P-2",
+	name: "P-3",
 	fn: () => {
 		assertEquals(uniqueArray([
 			{ type: { id: "_ETGENUS" } },
@@ -30,7 +30,7 @@ Deno.test({
 	}
 });
 Deno.test({
-	name: "P-3",
+	name: "P-4",
 	fn: () => {
 		assertEquals(uniqueArray([
 			{
