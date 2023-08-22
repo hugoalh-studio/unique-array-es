@@ -1,5 +1,5 @@
-import { assertEquals } from "https://deno.land/std@0.198.0/assert/assert_equals.ts";
-import { assertThrows } from "https://deno.land/std@0.198.0/assert/assert_throws.ts";
+import { assertEquals } from "https://deno.land/std@0.199.0/assert/assert_equals.ts";
+import { assertThrows } from "https://deno.land/std@0.199.0/assert/assert_throws.ts";
 import uniqueArray from "./mod.ts";
 Deno.test({
 	name: "P-1",
@@ -13,6 +13,7 @@ Deno.test({
 		assertEquals(uniqueArray([
 			{ foo: "bar" },
 			{ foo: "bar" },
+			{ bar: "gaz" },
 			{ bar: "gaz" }
 		]), [
 			{ foo: "bar" },
