@@ -10,7 +10,7 @@ import { equal } from "https://deno.land/std@0.200.0/assert/equal.ts";
  */
 export default function uniqueArray<T>(item: T[]): T[] {
 	if (!Array.isArray(item)) {
-		throw new TypeError(`Argument \`item\` must be T[]!`);
+		throw new TypeError(`Argument \`item\` must be a unknown[]!`);
 	}
 	const result: T[] = [];
 	for (const itemElement of new Set<T>(item).values()) {
