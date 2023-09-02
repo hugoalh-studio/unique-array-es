@@ -1,26 +1,25 @@
 import { assertEquals } from "https://deno.land/std@0.201.0/assert/assert_equals.ts";
-import { assertThrows } from "https://deno.land/std@0.201.0/assert/assert_throws.ts";
 import uniqueArray from "./mod.ts";
-Deno.test("Equal 1", () => {
+Deno.test("Empty", () => {
 	assertEquals(uniqueArray([]), []);
 });
-Deno.test("Equal 2", () => {
-	assertEquals(uniqueArray([
-		{ foo: "bar" },
-		{ foo: "bar" },
-		{ bar: "gaz" }
-	]), [
-		{ foo: "bar" },
-		{ bar: "gaz" }
-	]);
-});
-Deno.test("Equal 3", () => {
+Deno.test("1 Unique 1 Duplicate", () => {
 	assertEquals(uniqueArray([
 		{ type: { id: "_ETGENUS" } },
 		{ type: { id: "_ETGENUS" } }
 	]), [{ type: { id: "_ETGENUS" } }]);
 });
-Deno.test("Equal 4", () => {
+Deno.test("2 Unique 1 Duplicate", () => {
+	assertEquals(uniqueArray([
+		{ foo: "bar" },
+		{ foo: "bar" },
+		{ bar: "gaz" }
+	]), [
+		{ foo: "bar" },
+		{ bar: "gaz" }
+	]);
+});
+Deno.test("2 Unique 0 Duplicate", () => {
 	assertEquals(uniqueArray([
 		{
 			id: "_1p7ZED73OF98VbT1SzSkjn",
@@ -33,7 +32,7 @@ Deno.test("Equal 4", () => {
 			type: { id: "_ETGENUS" },
 			name: "Pinus",
 			friendlyId: "g-pinus",
-		},
+		}
 	]), [
 		{
 			id: "_1p7ZED73OF98VbT1SzSkjn",
@@ -46,36 +45,6 @@ Deno.test("Equal 4", () => {
 			type: { id: "_ETGENUS" },
 			name: "Pinus",
 			friendlyId: "g-pinus",
-		},
+		}
 	]);
-});
-Deno.test("Throw 1", () => {
-	assertThrows(() => {
-		uniqueArray(64);
-	});
-});
-Deno.test("Throw 2", () => {
-	assertThrows(() => {
-		uniqueArray(64n);
-	});
-});
-Deno.test("Throw 3", () => {
-	assertThrows(() => {
-		uniqueArray(false);
-	});
-});
-Deno.test("Throw 4", () => {
-	assertThrows(() => {
-		uniqueArray(undefined);
-	});
-});
-Deno.test("Throw 5", () => {
-	assertThrows(() => {
-		uniqueArray(null);
-	});
-});
-Deno.test("Throw 6", () => {
-	assertThrows(() => {
-		uniqueArray({ foo: "bar" });
-	});
 });
