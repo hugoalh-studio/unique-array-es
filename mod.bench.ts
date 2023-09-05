@@ -1,21 +1,21 @@
 import uniqueArray from "./mod.ts";
-Deno.bench("Empty", () => {
+Deno.bench("Empty", { permissions: "none" }, () => {
 	uniqueArray([]);
 });
-Deno.bench("1 Unique 1 Duplicate", () => {
+Deno.bench("1 Unique 1 Duplicate", { permissions: "none" }, () => {
 	uniqueArray([
 		{ type: { id: "_ETGENUS" } },
 		{ type: { id: "_ETGENUS" } }
 	]);
 });
-Deno.bench("2 Unique 1 Duplicate", () => {
+Deno.bench("2 Unique 1 Duplicate", { permissions: "none" }, () => {
 	uniqueArray([
 		{ foo: "bar" },
 		{ foo: "bar" },
 		{ bar: "gaz" }
 	]);
 });
-Deno.bench("2 Unique 0 Duplicate", () => {
+Deno.bench("2 Unique 0 Duplicate", { permissions: "none" }, () => {
 	uniqueArray([
 		{
 			id: "_1p7ZED73OF98VbT1SzSkjn",
