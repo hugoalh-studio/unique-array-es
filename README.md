@@ -20,6 +20,9 @@ A Deno module to return unique array elements without any duplicated elements by
 - Deno >= v1.34.0
 
 ```ts
+/* Either */
+import { ... } from "<URL>";// Named Import
+import * as uniqueArray from "<URL>";// Namespace Import
 import uniqueArray from "<URL>";// Default Import
 ```
 

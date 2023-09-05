@@ -8,7 +8,7 @@ import { equal } from "https://deno.land/std@0.201.0/assert/equal.ts";
  * uniqueArray([{ foo: "bar" }, { foo: "bar" }, { bar: "gaz" }]);
  * //=> [{ foo: "bar" }, { bar: "gaz" }]
  */
-export default function uniqueArray<T>(item: T[]): T[] {
+export function uniqueArray<T>(item: T[]): T[] {
 	const result: T[] = [];
 	for (const itemElement of new Set<T>(item).values()) {
 		if (
@@ -22,3 +22,4 @@ export default function uniqueArray<T>(item: T[]): T[] {
 	}
 	return result;
 }
+export default uniqueArray;
