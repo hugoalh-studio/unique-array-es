@@ -53,6 +53,8 @@ A Deno module to return unique array elements without any duplicated elements by
 ### Example
 
 - ```ts
+  import uniqueArray from "https://raw.githubusercontent.com/hugoalh-studio/unique-array-deno/main/mod.ts";
+
   uniqueArray([{ foo: "bar" }, { foo: "bar" }, { bar: "gaz" }]);
   //=> [{ foo: "bar" }, { bar: "gaz" }]
   ```
