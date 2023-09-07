@@ -13,33 +13,42 @@ A Deno module to return unique array elements without any duplicated elements by
 >
 > - [NodeJS](https://github.com/hugoalh-studio/unique-array-nodejs)
 
-## 📓 Documentation
-
-### Getting Started
+## 🎯 Target
 
 - Deno >= v1.34.0
 
-```ts
-/* Either */
-import { ... } from "<URL>";// Named Import
-import * as uniqueArray from "<URL>";// Namespace Import
-import uniqueArray from "<URL>";// Default Import
-```
+## 📥 Import
 
-| **Domain / Registry** | **URL** |
-|:-:|:--|
-| [Deno Land](https://deno.land/x/unique_array) | `https://deno.land/x/unique_array[@<Tag>]/mod.ts` |
-| DenoPKG | `https://denopkg.com/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts` |
-| GitHub Raw **\*** | `https://raw.githubusercontent.com/hugoalh-studio/unique-array-deno/<Tag>/mod.ts` |
-| Pax | `https://pax.deno.dev/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts` |
+> **ℹ️ Notice:** Although it is recommended to import with default module path `mod.ts` in general, it is also able to import with submodule path (if available), but do not import that submodule if either:
+>
+> - It's file path has an underscore prefix (e.g.: `_foo.ts`, `_util/bar.ts`).
+> - It is a benchmark or test file (e.g.: `foo.bench.ts`, `foo.test.ts`).
+> - It's symbol has an underscore prefix (e.g.: `export function _baz() {}`).
+>
+> These elements are not considered part of the public API, thus no stability is guaranteed for them.
 
-**\*:** Must provide a tag.
+- **[Deno Land](https://deno.land/x/unique_array):**
+  ```
+  https://deno.land/x/unique_array[@<Tag>]/mod.ts
+  ```
+- **DenoPKG:**
+  ```
+  https://denopkg.com/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts
+  ```
+- **GitHub Raw *\[Require Tag\]*:**
+  ```
+  https://raw.githubusercontent.com/hugoalh-studio/unique-array-deno/<Tag>/mod.ts
+  ```
+- **Pax:**
+  ```
+  https://pax.deno.dev/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts
+  ```
 
-### API
+## API
 
-```ts
-function uniqueArray<T>(item: T[]): T[];
-```
+- ```ts
+  function uniqueArray<T>(item: T[]): T[];
+  ```
 
 ### Example
 
