@@ -1,4 +1,4 @@
-import uniqueArray from "./mod.ts";
+import { uniqueArray } from "./mod.ts";
 Deno.bench("Empty", { permissions: "none" }, () => {
 	uniqueArray([]);
 });
