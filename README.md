@@ -9,28 +9,28 @@
 
 A Deno module to return unique array elements without any duplicated elements by ignore their reference points.
 
-## 📥 Import
+## 🔰 Begin
 
 ### Deno
 
 - **Target Version:** >= v1.34.0
 - **Require Permission:** *N/A*
 - **Domain/Registry:**
-  - **[Deno Land](https://deno.land/x/unique_array):**
+  - [Deno Land](https://deno.land/x/unique_array)
+    ```ts
+    import ... from "https://deno.land/x/unique_array[@<Tag>]/mod.ts";
     ```
-    https://deno.land/x/unique_array[@<Tag>]/mod.ts
+  - DenoPKG
+    ```ts
+    import ... from "https://denopkg.com/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts";
     ```
-  - **DenoPKG:**
+  - GitHub Raw *\[Require Tag\]*
+    ```ts
+    import ... from "https://raw.githubusercontent.com/hugoalh-studio/unique-array-deno/<Tag>/mod.ts";
     ```
-    https://denopkg.com/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts
-    ```
-  - **GitHub Raw *\[Require Tag\]*:**
-    ```
-    https://raw.githubusercontent.com/hugoalh-studio/unique-array-deno/<Tag>/mod.ts
-    ```
-  - **Pax:**
-    ```
-    https://pax.deno.dev/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts
+  - Pax
+    ```ts
+    import ... from "https://pax.deno.dev/hugoalh-studio/unique-array-deno[@<Tag>]/mod.ts";
     ```
 
 > **ℹ️ Notice:** Although it is recommended to import main module with path `mod.ts` in general, it is also able to import part of the module with sub path if available, but do not import if:
