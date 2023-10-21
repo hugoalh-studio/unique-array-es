@@ -1,4 +1,4 @@
-import { equal } from "https://deno.land/std@0.203.0/assert/equal.ts";
+import { equal } from "https://deno.land/std@0.204.0/assert/equal.ts";
 /**
  * Return unique array elements without any duplicated elements by ignore their reference points.
  * @template {unknown} T
