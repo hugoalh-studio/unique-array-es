@@ -5,9 +5,9 @@ on:
     types:
       - "published"
   workflow_dispatch:
-permissions:
-  actions: "write"
-  contents: "write"
+# permissions:
+#   actions: "write"
+#   contents: "write"
 jobs:
   main:
     name: "Main"
