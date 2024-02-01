@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: "SemVer Soft Tagger"
 on:
-  release:
-    types:
-      - "published"
+  # release:
+  #   types:
+  #     - "published"
   workflow_dispatch:
 # permissions:
 #   actions: "write"
