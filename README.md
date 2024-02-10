@@ -1,7 +1,6 @@
 # Unique Array (Deno)
 
 [⚖️ MIT](./LICENSE.md)
-[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/hugoalh-studio/unique-array-deno?label=Grade&logo=codefactor&logoColor=ffffff&style=flat-square "CodeFactor Grade")](https://www.codefactor.io/repository/github/hugoalh-studio/unique-array-deno)
 
 |  | **Release - Latest** | **Release - Pre** |
 |:-:|:-:|:-:|
@@ -15,7 +14,7 @@ A Deno module to return unique array elements without any duplicated elements by
 
 - **Target Version:** >= v1.34.0
 - **Require Permission:** *N/A*
-- **Domain/Registry:**
+- **Registry:**
   - [Deno Land](https://deno.land/x/unique_array)
     ```ts
     import ... from "https://deno.land/x/unique_array[@<Tag>]/mod.ts";
