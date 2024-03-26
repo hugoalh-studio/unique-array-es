@@ -6,7 +6,7 @@
 		".": "./mod.ts"
 	},
 	"imports": {
-		"https://deno.land/std@0.219.1/assert/equal.ts": "jsr:@std/assert@0.219.1/equal"
+		"https://deno.land/std@0.220.1/assert/equal.ts": "jsr:@std/assert@0.220.1/equal"
 	},
 	"publish": {
 		"exclude": [
