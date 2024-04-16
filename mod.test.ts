@@ -1,4 +1,4 @@
-import { assertEquals } from "TEST/assert_equals.ts";
+import { assertEquals } from "STD/assert/assert_equals.ts";
 import { uniqueArray } from "./mod.ts";
 Deno.test("Empty", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([]), []);

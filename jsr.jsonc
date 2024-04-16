@@ -1,12 +1,12 @@
 // This file is only for JSR related, non-JSR related must set in the file `deno.jsonc`!
 {
 	"name": "@hugoalh/unique-array",
-	"version": "1.0.17",
+	"version": "4.0.2",
 	"exports": {
 		".": "./mod.ts"
 	},
 	"imports": {
-		"https://deno.land/std@0.221.0/assert/equal.ts": "jsr:@std/assert@0.221.0/equal"
+		"https://deno.land/std@0.222.1/assert/equal.ts": "jsr:@std/assert@0.222.1/equal"
 	},
 	"publish": {
 		"exclude": [
@@ -21,7 +21,9 @@
 			"**/bench.ts",
 			"**/bench.tsx",
 			"**/test.ts",
-			"**/test.tsx"
+			"**/test.tsx",
+			".dnt.ts",
+			"npm/**"
 		],
 		"include": [
 			"**/*.ts",
