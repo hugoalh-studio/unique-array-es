@@ -3,13 +3,18 @@ import { uniqueArray } from "./mod.ts";
 Deno.test("Empty", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([]), []);
 });
-Deno.test("1 Unique 1 Duplicate", { permissions: "none" }, () => {
+Deno.test("Case 1", { permissions: "none" }, () => {
+	assertEquals(uniqueArray([{}, {}, {}, {}, {}, {}]), [{}]);
+});
+Deno.test("Case 2", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		{ type: { id: "_ETGENUS" } },
 		{ type: { id: "_ETGENUS" } }
-	]), [{ type: { id: "_ETGENUS" } }]);
+	]), [
+		{ type: { id: "_ETGENUS" } }
+	]);
 });
-Deno.test("2 Unique 1 Duplicate", { permissions: "none" }, () => {
+Deno.test("Case 3", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		{ foo: "bar" },
 		{ foo: "bar" },
@@ -19,7 +24,7 @@ Deno.test("2 Unique 1 Duplicate", { permissions: "none" }, () => {
 		{ bar: "gaz" }
 	]);
 });
-Deno.test("2 Unique 0 Duplicate", { permissions: "none" }, () => {
+Deno.test("Case 4", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		{
 			id: "_1p7ZED73OF98VbT1SzSkjn",
@@ -46,5 +51,22 @@ Deno.test("2 Unique 0 Duplicate", { permissions: "none" }, () => {
 			name: "Pinus",
 			friendlyId: "g-pinus",
 		}
+	]);
+});
+Deno.test("Case 5", { permissions: "none" }, () => {
+	assertEquals(uniqueArray([
+		new Set([1, 2, 3]),
+		new Set([1, 2])
+	]), [
+		new Set([1, 2, 3]),
+		new Set([1, 2])
+	]);
+});
+Deno.test("Case 6", { permissions: "none" }, () => {
+	assertEquals(uniqueArray([
+		new Set([1, 2, 3]),
+		new Set([1, 2, 3])
+	]), [
+		new Set([1, 2, 3])
 	]);
 });
