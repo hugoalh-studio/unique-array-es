@@ -2,20 +2,23 @@ import { uniqueArray } from "./mod.ts";
 Deno.bench("Empty", { permissions: "none" }, () => {
 	uniqueArray([]);
 });
-Deno.bench("1 Unique 1 Duplicate", { permissions: "none" }, () => {
+Deno.bench("Case 1", { permissions: "none" }, () => {
+	uniqueArray([{}, {}, {}, {}, {}, {}]);
+});
+Deno.bench("Case 2", { permissions: "none" }, () => {
 	uniqueArray([
 		{ type: { id: "_ETGENUS" } },
 		{ type: { id: "_ETGENUS" } }
 	]);
 });
-Deno.bench("2 Unique 1 Duplicate", { permissions: "none" }, () => {
+Deno.bench("Case 3", { permissions: "none" }, () => {
 	uniqueArray([
 		{ foo: "bar" },
 		{ foo: "bar" },
 		{ bar: "gaz" }
 	]);
 });
-Deno.bench("2 Unique 0 Duplicate", { permissions: "none" }, () => {
+Deno.bench("Case 4", { permissions: "none" }, () => {
 	uniqueArray([
 		{
 			id: "_1p7ZED73OF98VbT1SzSkjn",
@@ -28,6 +31,18 @@ Deno.bench("2 Unique 0 Duplicate", { permissions: "none" }, () => {
 			type: { id: "_ETGENUS" },
 			name: "Pinus",
 			friendlyId: "g-pinus",
-		},
+		}
+	]);
+});
+Deno.bench("Case 5", { permissions: "none" }, () => {
+	uniqueArray([
+		new Set([1, 2, 3]),
+		new Set([1, 2])
+	]);
+});
+Deno.bench("Case 6", { permissions: "none" }, () => {
+	uniqueArray([
+		new Set([1, 2, 3]),
+		new Set([1, 2, 3])
 	]);
 });
