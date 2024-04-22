@@ -5,9 +5,7 @@
 	"exports": {
 		".": "./mod.ts"
 	},
-	"imports": {
-		"https://deno.land/std@0.223.0/assert/equal.ts": "jsr:@std/assert@0.223.0/equal"
-	},
+	"imports": { },
 	"publish": {
 		"exclude": [
 			"**/*_bench.ts",

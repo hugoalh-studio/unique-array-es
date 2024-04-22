@@ -1,4 +1,19 @@
-import { equal } from "https://deno.land/std@0.223.0/assert/equal.ts";
+import { deepStrictEqual } from "node:assert";
+/**
+ * Determine the items whether are deep strict equal.
+ * @access private
+ * @param {unknown} a
+ * @param {unknown} b
+ * @returns {boolean} Determine result.
+ */
+function isEqual(a: unknown, b: unknown): boolean {
+	try {
+		deepStrictEqual(a, b);
+		return true;
+	} catch {
+		return false;
+	}
+}
 /**
  * Return unique array elements without any duplicated elements by ignore their reference points.
  * @template {unknown} T
@@ -14,7 +29,7 @@ export function uniqueArray<T>(item: T[]): T[] {
 		if (
 			result.length === 0 ||
 			!result.some((resultElement: T): boolean => {
-				return equal(itemElement, resultElement);
+				return isEqual(itemElement, resultElement);
 			})
 		) {
 			result.push(itemElement);

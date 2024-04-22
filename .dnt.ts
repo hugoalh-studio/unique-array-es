@@ -7,7 +7,9 @@ import { walk as readDir, type WalkEntry } from "STD/fs/walk.ts";
 const pathsMain: WalkEntry[] = await Array.fromAsync(readDir("."));
 const transformResult: TransformOutput = await transform({
 	entryPoints: ["mod.ts"],
-	mappings: {},
+	mappings: {
+		"node:assert": { name: "node:assert" }
+	},
 	shims: [],
 	target: "Latest"
 });
