@@ -2,23 +2,23 @@ import { uniqueArray } from "./mod.ts";
 Deno.bench("Empty", { permissions: "none" }, () => {
 	uniqueArray([]);
 });
-Deno.bench("Case 1", { permissions: "none" }, () => {
+Deno.bench("6 Elements 1 Uniques", { permissions: "none" }, () => {
 	uniqueArray([{}, {}, {}, {}, {}, {}]);
 });
-Deno.bench("Case 2", { permissions: "none" }, () => {
+Deno.bench("2 Elements 1 Uniques 1", { permissions: "none" }, () => {
 	uniqueArray([
 		{ type: { id: "_ETGENUS" } },
 		{ type: { id: "_ETGENUS" } }
 	]);
 });
-Deno.bench("Case 3", { permissions: "none" }, () => {
+Deno.bench("3 Elements 2 Uniques", { permissions: "none" }, () => {
 	uniqueArray([
 		{ foo: "bar" },
 		{ foo: "bar" },
 		{ bar: "gaz" }
 	]);
 });
-Deno.bench("Case 4", { permissions: "none" }, () => {
+Deno.bench("2 Elements 2 Uniques 1", { permissions: "none" }, () => {
 	uniqueArray([
 		{
 			id: "_1p7ZED73OF98VbT1SzSkjn",
@@ -34,13 +34,13 @@ Deno.bench("Case 4", { permissions: "none" }, () => {
 		}
 	]);
 });
-Deno.bench("Case 5", { permissions: "none" }, () => {
+Deno.bench("2 Elements 2 Uniques 2", { permissions: "none" }, () => {
 	uniqueArray([
 		new Set([1, 2, 3]),
 		new Set([1, 2])
 	]);
 });
-Deno.bench("Case 6", { permissions: "none" }, () => {
+Deno.bench("2 Elements 1 Uniques 2", { permissions: "none" }, () => {
 	uniqueArray([
 		new Set([1, 2, 3]),
 		new Set([1, 2, 3])

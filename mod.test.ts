@@ -3,10 +3,10 @@ import { uniqueArray } from "./mod.ts";
 Deno.test("Empty", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([]), []);
 });
-Deno.test("Case 1", { permissions: "none" }, () => {
+Deno.test("6 Elements 1 Uniques", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([{}, {}, {}, {}, {}, {}]), [{}]);
 });
-Deno.test("Case 2", { permissions: "none" }, () => {
+Deno.test("2 Elements 1 Uniques 1", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		{ type: { id: "_ETGENUS" } },
 		{ type: { id: "_ETGENUS" } }
@@ -14,7 +14,7 @@ Deno.test("Case 2", { permissions: "none" }, () => {
 		{ type: { id: "_ETGENUS" } }
 	]);
 });
-Deno.test("Case 3", { permissions: "none" }, () => {
+Deno.test("3 Elements 2 Uniques", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		{ foo: "bar" },
 		{ foo: "bar" },
@@ -24,7 +24,7 @@ Deno.test("Case 3", { permissions: "none" }, () => {
 		{ bar: "gaz" }
 	]);
 });
-Deno.test("Case 4", { permissions: "none" }, () => {
+Deno.test("2 Elements 2 Uniques 1", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		{
 			id: "_1p7ZED73OF98VbT1SzSkjn",
@@ -53,7 +53,7 @@ Deno.test("Case 4", { permissions: "none" }, () => {
 		}
 	]);
 });
-Deno.test("Case 5", { permissions: "none" }, () => {
+Deno.test("2 Elements 2 Uniques 2", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		new Set([1, 2, 3]),
 		new Set([1, 2])
@@ -62,7 +62,7 @@ Deno.test("Case 5", { permissions: "none" }, () => {
 		new Set([1, 2])
 	]);
 });
-Deno.test("Case 6", { permissions: "none" }, () => {
+Deno.test("2 Elements 1 Uniques 2", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
 		new Set([1, 2, 3]),
 		new Set([1, 2, 3])
