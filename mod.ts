@@ -1,6 +1,6 @@
 import { deepStrictEqual } from "node:assert";
 /**
- * Determine the items whether are deep strict equal.
+ * Determine whether the items are deep strict equal.
  * @access private
  * @param {unknown} a
  * @param {unknown} b
