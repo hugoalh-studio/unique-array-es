@@ -4,7 +4,7 @@
 
 [![Deno Land: unique_array](https://img.shields.io/badge/dynamic/json?label=unique_array&labelColor=000000&logo=deno&logoColor=ffffff&style=flat&url=https%3A%2F%2Fapiland.deno.dev%2Fv2%2Fmodules%2Funique_array&query=%24.latest_version "Deno Land: unique_array")](https://deno.land/x/unique_array)
 [![GitHub: hugoalh-studio/unique-array-es](https://img.shields.io/github/v/release/hugoalh-studio/unique-array-es?label=hugoalh-studio/unique-array-es&labelColor=181717&logo=github&logoColor=ffffff&sort=semver&style=flat "GitHub: hugoalh-studio/unique-array-es")](https://github.com/hugoalh-studio/unique-array-es)
-[![JSR: @hugoalh/unique-array](https://img.shields.io/jsr/v/@hugoalh/unique-array?label=JSR%20@hugoalh/unique-array&labelColor=F7DF1E&logoColor=000000&style=flat "JSR: @hugoalh/unique-array")](https://jsr.io/@hugoalh/unique-array)
+[![JSR: @hugoalh/unique-array](https://img.shields.io/jsr/v/@hugoalh/unique-array?label=@hugoalh/unique-array&labelColor=F7DF1E&logo=jsr&logoColor=000000&style=flat "JSR: @hugoalh/unique-array")](https://jsr.io/@hugoalh/unique-array)
 [![NPM: @hugoalh/unique-array](https://img.shields.io/npm/v/@hugoalh/unique-array?label=@hugoalh/unique-array&labelColor=CB3837&logo=npm&logoColor=ffffff&style=flat "NPM: @hugoalh/unique-array")](https://www.npmjs.com/package/@hugoalh/unique-array)
 
 An ES (JavaScript & TypeScript) module to return unique array elements without any duplicated elements by ignore their reference points.
