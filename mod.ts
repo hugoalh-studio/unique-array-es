@@ -20,8 +20,10 @@ function isEqual(a: unknown, b: unknown): boolean {
  * @param {T[]} item Array that need to have unique elements.
  * @returns {T[]} An array with unique elements.
  * @example
+ * ```ts
  * uniqueArray([{ foo: "bar" }, { foo: "bar" }, { bar: "gaz" }]);
  * //=> [{ foo: "bar" }, { bar: "gaz" }]
+ * ```
  */
 export function uniqueArray<T>(item: T[]): T[] {
 	const result: T[] = [];
