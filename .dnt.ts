@@ -18,15 +18,15 @@ await invokeDenoNodeJSTransformer({
 			"array",
 			"unique"
 		],
-		homepage: "https://github.com/hugoalh-studio/unique-array-es#readme",
+		homepage: "https://github.com/hugoalh/unique-array-es#readme",
 		bugs: {
-			url: "https://github.com/hugoalh-studio/unique-array-es/issues"
+			url: "https://github.com/hugoalh/unique-array-es/issues"
 		},
 		license: "MIT",
 		author: "hugoalh",
 		repository: {
 			type: "git",
-			url: "git+https://github.com/hugoalh-studio/unique-array-es.git"
+			url: "git+https://github.com/hugoalh/unique-array-es.git"
 		},
 		scripts: {
 		},
