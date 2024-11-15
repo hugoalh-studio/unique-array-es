@@ -16,7 +16,7 @@ function isEqual(a: unknown, b: unknown): boolean {
 /**
  * Return unique array elements without any duplicated elements by ignore their reference points.
  * @template {unknown} T
- * @param {T[]} item Array that need to have unique elements.
+ * @param {readonly T[]} item Array that need to have unique elements.
  * @returns {T[]} An array with unique elements.
  * @example
  * ```ts
@@ -24,7 +24,7 @@ function isEqual(a: unknown, b: unknown): boolean {
  * //=> [{ foo: "bar" }, { bar: "gaz" }]
  * ```
  */
-export function uniqueArray<T>(item: T[]): T[] {
+export function uniqueArray<T>(item: readonly T[]): T[] {
 	const result: T[] = [];
 	for (const itemElement of new Set<T>(item).values()) {
 		if (
