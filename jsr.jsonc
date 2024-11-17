@@ -3,6 +3,7 @@
 	"name": "@hugoalh/unique-array",
 	"version": "4.0.5",
 	"exports": {
+		"./assert": "./assert.ts",
 		".": "./mod.ts"
 	},
 	"imports": {
