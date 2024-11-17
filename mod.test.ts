@@ -1,10 +1,7 @@
 import { assertEquals } from "STD/assert/equals";
 import { uniqueArray } from "./mod.ts";
-Deno.test("Empty", { permissions: "none" }, () => {
+Deno.test("0 Elements", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([]), []);
-});
-Deno.test("6 Elements 1 Uniques", { permissions: "none" }, () => {
-	assertEquals(uniqueArray([{}, {}, {}, {}, {}, {}]), [{}]);
 });
 Deno.test("2 Elements 1 Uniques 1", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
@@ -14,14 +11,12 @@ Deno.test("2 Elements 1 Uniques 1", { permissions: "none" }, () => {
 		{ type: { id: "_ETGENUS" } }
 	]);
 });
-Deno.test("3 Elements 2 Uniques", { permissions: "none" }, () => {
+Deno.test("2 Elements 1 Uniques 2", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
-		{ foo: "bar" },
-		{ foo: "bar" },
-		{ bar: "gaz" }
+		new Set([1, 2, 3]),
+		new Set([1, 2, 3])
 	]), [
-		{ foo: "bar" },
-		{ bar: "gaz" }
+		new Set([1, 2, 3])
 	]);
 });
 Deno.test("2 Elements 2 Uniques 1", { permissions: "none" }, () => {
@@ -62,11 +57,19 @@ Deno.test("2 Elements 2 Uniques 2", { permissions: "none" }, () => {
 		new Set([1, 2])
 	]);
 });
-Deno.test("2 Elements 1 Uniques 2", { permissions: "none" }, () => {
+Deno.test("3 Elements 2 Uniques", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([
-		new Set([1, 2, 3]),
-		new Set([1, 2, 3])
+		{ foo: "bar" },
+		{ foo: "bar" },
+		{ bar: "gaz" }
 	]), [
-		new Set([1, 2, 3])
+		{ foo: "bar" },
+		{ bar: "gaz" }
 	]);
+});
+Deno.test("6 Elements 1 Uniques", { permissions: "none" }, () => {
+	assertEquals(uniqueArray([{}, {}, {}, {}, {}, {}]), [{}]);
+});
+Deno.test("6 Elements 6 Uniques", { permissions: "none" }, () => {
+	assertEquals(uniqueArray([1, 2n, "3", false, true, null]), [1, 2n, "3", false, true, null]);
 });
