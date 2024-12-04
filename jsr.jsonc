@@ -1,9 +1,10 @@
 {
 	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
 	"name": "@hugoalh/unique-array",
-	"version": "4.0.5",
+	"version": "4.1.0",
 	"exports": {
 		"./assert": "./assert.ts",
+		"./uniquify": "./uniquify.ts",
 		".": "./mod.ts"
 	},
 	"imports": {

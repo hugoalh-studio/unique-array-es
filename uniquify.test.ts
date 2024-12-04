@@ -1,5 +1,5 @@
 import { assertEquals } from "STD/assert/equals";
-import { uniqueArray } from "./mod.ts";
+import { uniqueArray } from "./uniquify.ts";
 Deno.test("0 Elements", { permissions: "none" }, () => {
 	assertEquals(uniqueArray([]), []);
 });
