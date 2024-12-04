@@ -60,7 +60,7 @@ An ES (JavaScript & TypeScript) module to return unique array elements without a
 ## 🧩 APIs
 
 - ```ts
-  function uniqueArray<T>(...items: readonly T[][]): T[];
+  function uniqueArray<T>(...items: readonly (readonly T[])[]): T[];
   ```
 
 > [!NOTE]
